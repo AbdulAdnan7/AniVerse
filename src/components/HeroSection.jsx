@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AOT from '../assets/AOT.avif';
 import DS from '../assets/Dmon.avif';
 import LOM from '../assets/LOM.jpg';
@@ -40,6 +40,13 @@ const HeroSection = () => {
     setCurrentIndex((prev) => (prev + 1) % animeList.length);
   };
 
+   useEffect(() => {
+     const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % animeList.length)
+     }, 3000)
+     return () => clearInterval(interval)
+   }, []) 
+
   return (
     <div>
       <div className='relative w-full h-[50vh] overflow-hidden'>
@@ -48,8 +55,6 @@ const HeroSection = () => {
           src={anime.img}
           alt={anime.alt}
         />
-
-        <div className='absolute top-4 left-4 text-white text-lg font-bold z-20'>ANIVERSE.</div>
 
         <div className='absolute bottom-4 left-4 sm:left-8 pr-12 text-white z-10'>
           <h1 className='text-5xl font-semibold'>{anime.title}</h1>
@@ -61,10 +66,10 @@ const HeroSection = () => {
         </div>
 
         <div className='absolute bottom-4 right-4 flex gap-4 z-20'>
-          <button onClick={prevSlide} className='bg-[#6C5CE7] p-2 rounded'>
+          <button onClick={prevSlide} className='bg-[#6C5CE7] text-white p-2 rounded'>
             prev
           </button>
-          <button onClick={nextSlide} className='bg-[#6C5CE7] p-2 rounded'>
+          <button onClick={nextSlide} className='bg-[#6C5CE7] text-white p-2 rounded'>
             Next
           </button>
         </div>
