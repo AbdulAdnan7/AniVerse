@@ -14,6 +14,7 @@ const HeroSection = () => {
   useEffect(() => {
     //Fetching the api
     const fetchTopAnime = async () => {
+      //Fetching with TRY block
       try {
         const res = await fetch('https://api.jikan.moe/v4/top/anime?limit=10');
         const data = await res.json();
@@ -40,6 +41,7 @@ const HeroSection = () => {
     setCurrentIndex((prev) => (prev + 1) % animeList.length);
   };
 
+    //For Automatic slide Changing
    useEffect(() => {
      const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % animeList.length)
