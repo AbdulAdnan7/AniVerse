@@ -61,15 +61,15 @@ const HeroSection = () => {
         />
 
         <div className='absolute bottom-4 left-4 sm:left-8 pr-12 text-white z-10'>
-          <h1 className='text-5xl font-semibold'>{anime.title}</h1>
-          <p className='font-semibold max-w-lg mt-2 truncate'>{anime.desc}</p>
+          <h1 className=' text-2xl md:text-5xl font-semibold'>{anime.title}</h1>
+          <p className='font-semibold max-w-lg sm:text-lg mt-2 line-clamp-2'>{anime.desc}</p>
           <div className='mt-4 flex gap-4'>
             <button className='bg-[#6C5CE7] hover:bg-[#5A4BCF] text-white p-2 px-4 rounded'>Watch now</button>
             <button className='bg-transparent border text-white border-white px-4 py-2 rounded hover:bg-white hover:text-black transition'>Detail</button>
           </div>
         </div>
 
-        <div className='absolute bottom-4 right-4 flex gap-4 z-20'>
+        <div className='absolute hidden bottom-4 right-4 md:flex gap-4 z-20'>
           <button onClick={prevSlide} className='bg-[#6C5CE7] text-white p-2 rounded'>
             prev
           </button>
