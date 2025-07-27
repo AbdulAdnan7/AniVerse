@@ -1,47 +1,30 @@
 import React from 'react'
 import AOT from '../assets/AOT.avif'
-import HoverExpand from '../components/ui/hover-expand'
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import HeroSection from '@/components/HeroSection'
 
 const Home = () => {
-   
-
-
-  const HeroSection = [
-    {
-      name: 'Attack On Titan',
-      image: AOT
-    }
-  ]
-
-return (
-  <>
-  <section className="px-4 py-8">
+  return (
+   <section>
+    <HeroSection />
+   </section>
+  )
   {
-    HeroSection.map((anime, index) => (
-      <div key={index} className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
-        {/* Text block */}
-        <div className="w-full lg:w-[450px] p-6">
-          <h2 className="text-3xl font-bold text-white">{anime.name}</h2>
-          <p className="mt-2 text-gray-300">
-            Humanity vs Titans. A dark, gripping anime with unmatched intensity.
-          </p>
-        </div>
+    /**
+     * <div className='absolute inset-0 left-[400px] right-20 top-58'>
+  <div className='flex gap-4'>
+    <button className='bg-gra p-2 rounded-full'>
+      <FontAwesomeIcon icon={faAngleLeft} />
+    </button>
+    <button className='bg-gray-400 p-2 rounded-full'>
+      <FontAwesomeIcon icon={faAngleRight} />
+    </button>
+  </div>
+</div>
 
-        {/* Image */}
-        <img
-          src={anime.image}
-          alt={anime.name}
-          className="w-full lg:w-[650px] h-[350px] object-cover rounded-lg shadow-lg"
-        />
-      </div>
-    ))
+     */
   }
-</section>
-
-  </>
-)
-
 }
+
 export default Home
