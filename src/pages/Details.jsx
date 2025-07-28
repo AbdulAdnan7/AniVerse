@@ -4,9 +4,11 @@ import { useParams } from 'react-router-dom'
 const Details = () => {
    const {id} = useParams()
    
-   const [anime, setAnime] = React.useState([])
+   const [anime, setAnime] = React.useState({})
    const [characters, setCharacters] = React.useState([])
    const [showMore, setShowMore] = React.useState(false);
+
+   const { title, synopsis, trailer, duration, aired, season, images, rank, score, scored_by, popularity, status, rating, source} = anime;
 
    useEffect(() => {
 

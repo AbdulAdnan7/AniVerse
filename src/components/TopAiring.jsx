@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const TopAiring = () => {
    const [topAnime, setTopAnime] = useState([]);
@@ -41,13 +42,14 @@ const TopAiring = () => {
   </p>
   <div className="flex justify-between items-center mt-auto">
     <span className="text-yellow-400 font-semibold">⭐ {anime.score || "N/A"}</span>
-    <a
+    <Link to={`/anime/${anime.mal_id}`}><a
       href={anime.url}
       target="_blank"
       className="text-sm bg-[#6C5CE7] hover:bg-[#5A4BCF] px-3 py-1 rounded-lg transition"
     >
       Watch
     </a>
+    </Link>
   </div>
 </div>
 
@@ -72,13 +74,13 @@ const TopAiring = () => {
   </p>
   <div className="flex justify-between items-center mt-auto">
     <span className="text-yellow-400 font-semibold">⭐ {anime.score || "N/A"}</span>
-    <a
+   <Link to={`/anime/${anime.mal_id}`}><a
       href={anime.url}
       target="_blank"
       className="text-sm bg-[#6C5CE7] hover:bg-[#5A4BCF] px-3 py-1 rounded-lg transition"
     >
       Watch
-    </a>
+    </a></Link>
   </div>
 </div>
 
