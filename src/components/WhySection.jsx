@@ -27,7 +27,7 @@ const WhySection = () => {
      </div>
      </main>
      <main>
-         <div className="bg-[#1a1a2e] text-white p-6 rounded-xl max-w-xl mx-auto mt-2 shadow-lg">
+         <div className="bg-[#0f0f1a] text-white p-6 rounded-xl max-w-xl mx-auto mt-2 shadow-lg">
       <h2 className="text-2xl font-bold text-center mb-4">🎌 Anime Trivia</h2>
       {fact ? (
         <p className="italic text-lg">

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import HeroSection from '@/components/HeroSection'
 import TopAiring from '@/components/TopAiring'
 import WhySection from '@/components/WhySection'
+import Footer from '@/components/Footer'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
     <HeroSection />
     <TopAiring />
     <WhySection />
+    <Footer />
    </section>
   )
 }

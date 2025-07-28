@@ -9,7 +9,7 @@ const TopAiring = () => {
      fetch("https://api.jikan.moe/v4/top/anime")
      .then((res) => res.json())
      .then((data) => {
-        setTopAnime(data.data.slice(0,9));
+        setTopAnime(data.data.slice(0,12));
      })
      .catch((err) => console.error('Error fetching anime: ', err))
    }, []);
@@ -18,7 +18,7 @@ const TopAiring = () => {
     fetch('https://api.jikan.moe/v4/anime?filter=upcoming')
     .then((res) => res.json())
     .then((data) => {
-        setUpcomingAnime(data.data.slice(0,9))
+        setUpcomingAnime(data.data.slice(0,12))
     })
     .catch((err) => console.error('Failed to Fetch Animes: ', err))
    }, [])
