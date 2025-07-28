@@ -1,0 +1,52 @@
+[
+  {
+    "anime": "Naruto",
+    "character": "Naruto Uzumaki",
+    "quote": "I'm not gonna run away, I never go back on my word! That's my nindō: my ninja way!"
+  },
+  {
+    "anime": "Death Note",
+    "character": "L",
+    "quote": "There is no heaven or hell. No matter what you do while you're alive, everybody goes to the same place once you die."
+  },
+  {
+    "anime": "One Piece",
+    "character": "Monkey D. Luffy",
+    "quote": "Power isn’t determined by your size, but the size of your heart and dreams!"
+  },
+  {
+    "anime": "Bleach",
+    "character": "Ichigo Kurosaki",
+    "quote": "It's meaningless to just live, and it's meaningless to just fight. I want to win!"
+  },
+  {
+    "anime": "Fullmetal Alchemist: Brotherhood",
+    "character": "Edward Elric",
+    "quote": "A lesson without pain is meaningless. That’s because you can’t gain something without sacrificing something else in return."
+  },
+  {
+    "anime": "Attack on Titan",
+    "character": "Eren Yeager",
+    "quote": "If you win, you live. If you lose, you die. If you don’t fight, you can’t win!"
+  },
+  {
+    "anime": "Tokyo Ghoul",
+    "character": "Ken Kaneki",
+    "quote": "It's not the world that's messed up; it's those of us in it."
+  },
+  {
+    "anime": "Jujutsu Kaisen",
+    "character": "Satoru Gojo",
+    "quote": "Throughout heaven and earth, I alone am the honored one."
+  },
+  {
+    "anime": "Demon Slayer",
+    "character": "Tanjiro Kamado",
+    "quote": "Those who regret their own actions are not weak."
+  },
+  {
+    "anime": "My Hero Academia",
+    "character": "All Might",
+    "quote": "When you have to save someone, they're usually in a scary situation. A true hero saves not only their lives but also their hearts!"
+  }
+]
