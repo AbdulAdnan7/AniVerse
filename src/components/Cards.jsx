@@ -7,30 +7,30 @@ const Cards = () => {
  const Accordian = [
   {
     id: 1,
-    question: 'Senpai Says',
-    answer: "Senpai notices your curiosity! Don't worry, we've got all the answers you've been quietly wondering about. Just don't blush!"
+    question: "Senpai Says",
+    answer: "Senpai noticed your burning questions! Stay calm, kouhai—we’ve got the answers you secretly hoped someone would explain (without making it awkward)."
   },
   {
     id: 2,
-    question: 'FAQ no Justu',
-    answer: "Using forbidden FAQ techniques to deliver clarity! These answers are so sharp, even Kakashi would approve."
+    question: "FAQ no Justu",
+    answer: "Summoning forbidden scrolls of clarity! These FAQs have been passed down through shinobi generations... okay maybe just a dev or two, but still—believe it!"
   },
   {
     id: 3,
-    question: 'Scroll of Knowledge',
-    answer: "Ancient secrets sealed in this scroll… Just kidding. It’s your go-to guide for all things Aniverse—unroll it, and unlock the info!"
+    question: "Scroll of Knowledge",
+    answer: "This ancient scroll contains answers mortals seek! Unseal it carefully and prepare for wisdom... or at least really helpful info about the site."
   },
   {
     id: 4,
-    question: 'The Otaku Oracle',
-    answer: "Ask, and ye shall receive… anime wisdom from the oracle of weebdom. All prophecies come with subtitles."
+    question: "The Otaku Oracle",
+    answer: "You’ve consulted the Oracle—good choice! All anime truths shall be revealed... and yes, your waifu still ranks top tier."
   },
   {
     id: 5,
-    question: 'EncycloNek',
-    answer: "Your kawaii little guide to the anime universe! Filled with purr-fectly curated facts and answers. Nyaa~ 🐾"
+    question: "EncycloNek",
+    answer: "Nyaa~ Welcome to the ultimate neko-approved guide! Packed with cute facts and handy tips. Warning: may cause spontaneous head tilts and sparkles ✨🐾"
   }
-]
+];
 
    const toggle = (id) => {
     setIsOpen(prev => (prev === id ? null : id ))
@@ -38,9 +38,9 @@ const Cards = () => {
 
   return (
    <>
-   <section>
-    <div className='bg-white w-[80vh] h-12'>
-      <div className="bg-[#0f0f1c] text-white border-l-4 border-[#ff4ecd] px-2 pt-2 p-2 rounded-md shadow-lg font-[cursive]">
+   <section className="px-4 sm:px-6 md:px-8 py-6">
+    <div className=' max-w-xl mx-auto'>
+      <div className="bg-[#0f0f1c] text-white border-l-4 border-[#ff4ecd] px-2 pt-2 p-2 shadow-lg font-[cursive]">
   <h2 className="text-xl text-[#ffb3ec] mb-2">FAQ no Justu</h2>
   <p className="italic text-[#ccccff]">Master the ancient secrets of otaku knowledge...</p>
 </div>
