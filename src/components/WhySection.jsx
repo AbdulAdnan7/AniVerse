@@ -40,7 +40,7 @@ const WhySection = () => {
       {/* Optional: Refresh Button */}
       <button
         onClick={fetchTrivia}
-        className="mt-4 px-4 py-2 bg-[#6C5CE7] text-white rounded hover:bg-pink-600"
+        className="mt-4 px-4 py-2 bg-[#6C5CE7] text-white rounded hover:bg-[#a29bfe]"
       >
         New Trivia
       </button>

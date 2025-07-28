@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className='max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-10'>
 
         <div>
-          <h3 className='text-xl font-bold text-pink-600 mb-4'>ANIVERSE 🌸</h3>
+          <h3 className='text-xl font-bold text-[#6C5CE7] mb-4'>ANIVERSE 🌸</h3>
           <p>Your go-to hub for anime updates, trivia, and top picks. Join the community of weebs!</p>
         </div>
 
@@ -38,7 +38,7 @@ const Footer = () => {
             placeholder="Your email"
             className="p-2 w-full bg-[#1a1a2e] rounded text-white mb-2 focus:outline-none"
           />
-          <button className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded w-full">
+          <button className="bg-[#6C5CE7] hover:bg-[#a29bfe] text-white px-4 py-2 rounded w-full">
             Subscribe
           </button>
         </div>

@@ -38,8 +38,8 @@ const Cards = () => {
 
   return (
    <>
-   <section className="px-4 sm:px-6 md:px-8 ">
-    <div className=' max-w-xl mx-auto'>
+   <section className="px-4 sm:px-8 md:px-12 ">
+    <div className=' max-w-3xl mx-auto'>
       <div className="bg-[#0f0f1c] text-white border-l-4 border-[#6C5CE7] px-2 pt-2 p-2 shadow-lg font-[cursive]">
   <h2 className="text-xl text-[#6C5CE7] mb-2">FAQ no Justu</h2>
   <p className="italic text-[#f5c2e7]">Master the ancient secrets of otaku knowledge...</p>

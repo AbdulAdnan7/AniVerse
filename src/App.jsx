@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import Details from './pages/Details'
 
 const App = () => {
    const route = createBrowserRouter([
@@ -11,6 +12,13 @@ const App = () => {
         <Navbar />
         <Home />
       </div>
+    },
+    {
+      path: '/anime/:id',
+      element: <>
+      <Navbar />
+      <Details />
+      </>
     }
    ])
 
