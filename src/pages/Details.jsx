@@ -52,15 +52,15 @@ const Details = () => {
           className=''
           />
           <div className="animedetails space-y-4 text-1xl">
-            <p><span>Aired:</span><span>{aired?.string}</span></p>
-            <p><span>Rating:</span><span>{rating}</span></p>
-            <p><span>Rank:</span><span>{rank}</span></p>
-            <p><span>Scored by:</span>{scored_by}<span></span></p>
-            <p><span>Popularity:</span><span>{popularity}</span></p>
-            <p><span>Status:</span><span>{status}</span></p>
-            <p><span>Source:</span><span>{source}</span></p>
-            <p><span>Season</span><span>{season}</span></p>
-            <p><span>Duration:</span><span>{duration}</span></p>
+            <p className='flex gap-x-2'><strong>Aired:</strong><span>{aired?.string}</span></p>
+            <p className='flex gap-x-2'><strong>Rating:</strong><span>{rating}</span></p>
+            <p className='flex gap-x-2'><strong>Rank:</strong><span>{rank}</span></p>
+            <p className='flex gap-x-2'><strong>Scored by:</strong>{scored_by}<span></span></p>
+            <p className='flex gap-x-2' ><strong>Popularity:</strong><span>{popularity}</span></p>
+            <p className='flex gap-x-2'><strong>Status:</strong><span>{status}</span></p>
+            <p className='flex gap-x-2'><strong>Source:</strong><span>{source}</span></p>
+            <p className='flex gap-x-2'><strong>Season</strong><span>{season}</span></p>
+            <p className='flex gap-x-2'><strong>Duration:</strong><span>{duration}</span></p>
           </div>
         </div>
        <p className={`ml-70 mt-20 text-gray-300 text-sm leading-relaxed text-justify px-6 max-w-4xl`}>
