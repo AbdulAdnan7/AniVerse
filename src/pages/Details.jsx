@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const Details = () => {
    const {id} = useParams()
@@ -8,8 +8,9 @@ const Details = () => {
    const [characters, setCharacters] = React.useState([])
    const [showMore, setShowMore] = React.useState(false);
 
-   const { title, synopsis, trailer, duration, aired, season, images, rank, score, scored_by, popularity, status, rating, source} = anime;
+   const { title, synopsis, trailer, duration, aired, season, images, rank, score, scored_by, popularity, status, rating, source} = anime;  
 
+   //For Anime
    useEffect(() => {
 
    const fetchAnimes = async () => {
@@ -17,14 +18,26 @@ const Details = () => {
     const res = await fetch(`https://api.jikan.moe/v4/anime/${id}`)
     const data = await res.json()
     setAnime(data.data)
-    console.log(data); 
     } catch (err) {
       console.error(err)
     }
    }
 
+   //For Characters
+   const fetchCharacters = async () => {
+    try {
+      const res = await fetch(`https://api.jikan.moe/v4/anime/${id}/characters`);
+      const data = await res.json();
+      setCharacters(data.data)
+      console.log(data.data)
+    } catch (err) {
+      console.error(`Failed to Fetch: `, err)
+    }
+   }
+
    if(id) {
     fetchAnimes();
+    fetchCharacters()
    }
    }, [id])
 
@@ -60,8 +73,26 @@ const Details = () => {
           trailer?.embed_url && (
             <iframe  
             src={trailer?.embed_url}
+            title={title}
+            allowFullScreen
             />
           )
+        }
+      </div>
+      <p>Characters</p>
+      <div className="characters">
+        {
+           characters.map((character, index) => {
+            const {role} = character
+            const {images, name, mal_id} = character.character
+            return <Link to={`/characters/${mal_id}`} key={index}>
+             <div className="character">
+              <img src={images?.jpg.image_url} alt='' />
+              <h4>{name}</h4>
+              <p>{role}</p>
+             </div>
+            </Link>
+           })
         }
       </div>
     </div>
