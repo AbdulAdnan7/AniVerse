@@ -29,7 +29,42 @@ const Details = () => {
    }, [id])
 
   return (
-    <div>Details</div>
+    <div className='text-white min-h-screen'>
+      <div className="title">
+        {title}
+      </div>
+      <div className="details ">
+        <div className="detail flex justify-evenly">
+          <img src={images?.jpg.large_image_url} alt={title} />
+          <div className="animedetails">
+            <p><span>Aired:</span><span>{aired?.string}</span></p>
+            <p><span>Rating:</span><span>{rating}</span></p>
+            <p><span>Rank:</span><span>{rank}</span></p>
+            <p><span>Scored by:</span>{scored_by}<span></span></p>
+            <p><span>Popularity;</span><span>{popularity}</span></p>
+            <p><span>Status:</span><span>{status}</span></p>
+            <p><span>Source:</span><span>{source}</span></p>
+            <p><span>Season</span><span>{season}</span></p>
+            <p><span>Duration:</span><span>{duration}</span></p>
+          </div>
+        </div>
+        <p>{ showMore ? synopsis : synopsis?.slice(0, 450)  }</p>
+        <button 
+        onClick={() => setShowMore(!showMore)}
+        className='text-cyan-700 font-bold'
+        >{showMore ? 'Show Less' : 'Read More'}</button>
+      </div>
+      <div className="trailer">
+        <p>Trailer</p>
+        {
+          trailer?.embed_url && (
+            <iframe  
+            src={trailer?.embed_url}
+            />
+          )
+        }
+      </div>
+    </div>
   )
 }
 
