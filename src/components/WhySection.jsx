@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import Cards from './Cards'
+import Cards from './Accoedian'
 import quotes from './quotes.json'
 
 const WhySection = () => {
@@ -19,6 +19,7 @@ const WhySection = () => {
 
   return (
    <>
+   {/** For Acc */}
    <section className='min-h-screen'>
      <main className='mt-12'>
      <h1 className='text-center text-4xl text-white font-bold'>"Aniverse Q&A: Weeb Edition 👘"</h1>
@@ -26,6 +27,7 @@ const WhySection = () => {
       <Cards />
      </div>
      </main>
+     {/** For Random Quotes aka Trivia */}
      <main>
          <div className="bg-[#0f0f1a] text-white p-6 rounded-xl max-w-xl mx-auto mt-2 shadow-lg">
       <h2 className="text-2xl font-bold text-center mb-4">🎌 Anime Trivia</h2>

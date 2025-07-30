@@ -38,6 +38,7 @@ const Cards = () => {
 
   return (
    <>
+   {/** For Accordian */}
    <section className="px-4 sm:px-8 md:px-12 ">
     <div className=' max-w-3xl mx-auto'>
       <div className="bg-[#0f0f1c] text-white border-l-4 border-[#6C5CE7] px-2 pt-2 p-2 shadow-lg font-[cursive]">

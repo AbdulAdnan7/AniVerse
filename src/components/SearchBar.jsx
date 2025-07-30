@@ -44,7 +44,8 @@ useEffect(() => {
 
 
   return (
-  <div className="relative flex w-full max-w-md">
+ <div className="relative w-full max-w-md mx-auto px-4 sm:px-6 lg:px-0">
+  {/**For SearchDilagoe */}
   {showDialog && location.pathname !== '/' && (
   <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-100 text-yellow-900 px-4 py-2 rounded shadow-lg z-[9999] text-sm">
     To go to homepage, click on the <span className="font-semibold">logo</span>.
@@ -56,14 +57,15 @@ useEffect(() => {
     </button>
   </div>
 )}
-
+    {/**For Search Bar */}
  <input
   type="text"
   value={search}
   onChange={(e) => setSearch(e.target.value)}
   placeholder="Search anime..."
-  className="w-full px-3 py-2 rounded-md bg-[#1a1a2e] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+ className="w-full px-3 py-2 text-sm sm:text-base md:text-base rounded-md bg-[#1a1a2e] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
 />
+{/** for search result to appear while i type */}
   {result.length > 0 && (
     <ul className="absolute mt-1 w-full bg-[#1a1a2e] text-white rounded shadow-lg z-50 max-h-60 overflow-y-auto divide-y divide-gray-700">
           {result.map((anime) => (
