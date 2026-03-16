@@ -67,7 +67,7 @@ const Details = () => {
           <p><strong>Status:</strong> {status}</p>
           <p><strong>Source:</strong> {source}</p>
           <p><strong>Season:</strong> {season}</p>
-          <p><strong>Duration:</strong> {duration}</p>
+          <p><strong>Duration of the anime:</strong> {duration}</p>
         </div>
       </div>
 
