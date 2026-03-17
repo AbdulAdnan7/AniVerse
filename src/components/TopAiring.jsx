@@ -27,7 +27,7 @@ const TopAiring = () => {
 
   return (
     <>
-    <section className='mt-10 px-4 min-h-screen'>
+    <section id='topAiring' className='mt-10 px-4 min-h-screen'>
         <div>
    <h1 className='text-white text-3xl font-bold'>Top Airing</h1>
    </div>
@@ -65,7 +65,7 @@ const TopAiring = () => {
    <h1 className='text-white text-3xl font-bold'>Upcoming Anime</h1>
    </div>
    {/** For Upcoming */}
-   <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8'>
+   <div id='upcoming' className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8'>
      {
         upcomingAnime.map((anime) => (
             <div key={anime.mal_id} className='bg-[#1e1e2f] text-white rounded-xl overflow-hidden shadow-lg hover:scale-105 transition duration-300'>

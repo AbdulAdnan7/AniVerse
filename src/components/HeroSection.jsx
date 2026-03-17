@@ -55,7 +55,7 @@ const HeroSection = () => {
    if (animeList.length === 0) return <div className='text-white p-10'>Loading....</div>
 
   return (
-    <div>
+    <div id='home'>
       <div className='relative w-full h-[50vh] overflow-hidden'>
        <img
   src={anime.img}
