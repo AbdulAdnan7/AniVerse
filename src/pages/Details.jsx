@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import { number } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 const Details = () => {
@@ -41,6 +42,9 @@ const Details = () => {
    }
    }, [id])
 
+
+
+
   return (
   <div className="text-white min-h-screen px-4">
     {/* Title */}
@@ -63,6 +67,7 @@ const Details = () => {
           <p><strong>Rating:</strong> {rating}</p>
           <p><strong>Rank:</strong> {rank}</p>
           <p><strong>Scored by:</strong> {scored_by}</p>
+          <p><strong>Score:</strong> <span className={score >= 7 ? "text-green-500 font-bold" : 'text-red-500 font-bold'}> {score}</span></p>
           <p><strong>Popularity:</strong> {popularity}</p>
           <p><strong>Status:</strong> {status}</p>
           <p><strong>Source:</strong> {source}</p>
@@ -73,7 +78,7 @@ const Details = () => {
 
       {/* Synopsis */}
       <p className="mt-8 text-gray-300 text-sm md:text-base leading-relaxed text-justify max-w-4xl mx-auto">
-        {showMore ? synopsis : synopsis?.slice(0, 450) + '...'}
+        {synopsis ? (showMore ? synopsis : synopsis?.slice(0, 450) + '...') : "Loading..."}
         <button
           onClick={() => setShowMore(!showMore)}
           className="ml-2 text-cyan-500 font-semibold hover:underline"
